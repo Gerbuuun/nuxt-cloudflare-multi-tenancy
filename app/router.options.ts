@@ -11,6 +11,7 @@ export default <RouterOptions>{
     const eventID = useEvent();
 
     const subdomain = hostname.replace(`.${DOMAIN}`, '');
+    // eventID.value = await $fetch('/api/tenant', { query: { subdomain } });
     eventID.value = await getEventID(subdomain);
 
     return routes
@@ -28,7 +29,6 @@ export default <RouterOptions>{
  * @returns event ID
  */
 async function getEventID(subdomain: string) {
-  // const eventID = await $fetch('/api/tenant', { query: { subdomain } });
   const ids = {
     'event-1': 'event_fq13f4gqg40gl',
     'event-2': 'event_q34gp29ungwdf',
