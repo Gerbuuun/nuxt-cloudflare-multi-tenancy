@@ -1,0 +1,8 @@
+name = "nuxt-cloudflare-multi-tenancy"
+compatibility_date = "2025-01-07"
+compatibility_flags = ["nodejs_compat"]
+
+# change this to your domain
+routes = [{ pattern = "*.my-company.com/*", zone_id = "my-company.com" }]
+
+# other options...
